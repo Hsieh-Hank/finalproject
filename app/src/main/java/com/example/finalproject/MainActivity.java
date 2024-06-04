@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -121,10 +122,10 @@ public class MainActivity extends AppCompatActivity {
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
-                tvLoc = itemView.findViewById(R.id.tvLocation);
-                tvAr = itemView.findViewById(R.id.tvArea);
-                tvDataTime = itemView.findViewById(R.id.tvTime);
-                tvTemp = itemView.findViewById(R.id.tvTempature);
+                tvLoc = itemView.findViewById(R.id.tvMoreLoca);
+                tvAr = itemView.findViewById(R.id.tvMoreArea);
+                tvDataTime = itemView.findViewById(R.id.tvMoreTime);
+                tvTemp = itemView.findViewById(R.id.tvMoreTempature);
             }
         }
 
@@ -143,6 +144,18 @@ public class MainActivity extends AppCompatActivity {
             holder.tvAr.setText(item.get("locationName"));
             holder.tvDataTime.setText("時間：" + item.get("dataTime"));
             holder.tvTemp.setText("溫度：" + item.get("value"));
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), more_info.class);
+                    intent.putExtra("locationsName", item.get("locationsName"));
+                    intent.putExtra("locationName", item.get("locationName"));
+                    intent.putExtra("dataTime", item.get("dataTime"));
+                    intent.putExtra("value", item.get("value"));
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
 
         @Override

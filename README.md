@@ -4,7 +4,7 @@
 
 整理需要的資料後使用 https://jsonserve.com/ 產生新的json網址  https://api.jsonserve.com/JPYApd
 
-測試影片 https://youtu.be/ux200VA_EhM
+測試影片 https://youtu.be/GoUNWHMtAJU
 
 ![image](https://github.com/Hsieh-Hank/finalproject/blob/master/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20003317.png)
 ![image](https://github.com/Hsieh-Hank/finalproject/blob/master/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202024-06-05%20003329.png)
